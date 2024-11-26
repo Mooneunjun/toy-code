@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #33353b;
+  color: white;
+  padding: 20px 0px;
+  height: 100vh;
+  width: 248px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.logo-wrap {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.logo {
+  display: block;
+  width: 176px;
+  height: 32px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul .tx {
+  margin-bottom: 2rem;
+  padding: 16px 32px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  gap: 24px;
+  width: 100%;
+  opacity: 0.7;
+  padding: 16px 32px;
+}
+
+.sidebar ul li a:hover {
+  opacity: 1;
+}
+
+.sidebar ul li a.active {
+  background-color: #15a46a;
+  opacity: 1;
+}
+
+.sidebar ul li .tx-link {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  padding: 0px;
+  border-radius: 0.5rem;
+}
+
+.tx-btn {
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  line-height: 1.2;
+  padding: 17px 0 18px;
+  height: 3rem;
+  width: 100%;
+  background-color: #15a46a;
+  border-radius: 0.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tx-btn:hover {
+  background-color: #128456;
+}
+
+.main-content {
+  max-width: 630px;
+  width: 100%;
+  padding: 48px 15px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.nav-container {
+  position: relative;
+  height: 100vh;
+}
+
+.nav-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 32px;
+  font-size: 12px;
+  opacity: 0.7;
+
+  p {
+    margin: 0px;
+    font-weight: 600;
+  }
+}
+
+.nav-footer p:last-child {
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+.nav-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-footer a:hover {
+  text-decoration: underline;
+}
