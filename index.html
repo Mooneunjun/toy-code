@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body style="overscroll-behavior-x: auto">
     <div class="sidebar">
@@ -242,13 +243,75 @@
       </footer>
     </div>
     <div class="main-content">
+      <div id="home" class="panel active">
+        <h3 class="dashboard-title">Dashboard</h3>
+        <div class="content-wrapper">
+          <div class="business-info">
+            <h3 class="business-title">
+              글로벌 비즈니스를 위한<br />최적의 선택
+            </h3>
+            <p class="business-description">
+              은행 방문은 이제 과거의 일이 되었습니다. <br />
+              와이어바알리 비즈니스 송금 서비스를 통해 시간과 비용을 절약하세요.
+            </p>
+          </div>
+          <img
+            class="business-image"
+            style="display: block; -webkit-user-select: none; margin: auto"
+            src="image_480.png"
+            alt="와이어바알리 비즈니스 서비스 이미지"
+          />
+        </div>
+
+        <div class="cs-wrapper">
+          <div class="cs-info">
+            <h4 class="cs-title">도움이 필요하새요?</h4>
+            <p class="cs-description">
+              평일 오전 10시 ~ 오후 7시 (한국 시간 기준)
+            </p>
+            <div class="contact-info">
+              <p class="contact-phone">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      fill="#717580"
+                      fill-rule="nonzero"
+                      d="M21 20.56v-4.225c0-.484-.346-.898-.821-.984l-3.998-.727c-.41-.075-.823.112-1.037.47L14 17c-1.5-.833-2.833-1.833-4-3-1.167-1.167-2.167-2.5-3-4l1.907-1.144c.357-.214.544-.627.47-1.037l-.728-3.998C8.563 3.346 8.15 3 7.665 3H3.44c-.254 0-.468.191-.497.445C2.442 7.942 4.127 12.127 8 16c3.873 3.873 8.058 5.558 12.555 5.057.254-.029.445-.243.445-.497z"
+                    />
+                  </g>
+                </svg>
+                1666-1073
+              </p>
+              <p class="contact-email">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      fill="#717580"
+                      fill-rule="nonzero"
+                      d="M22 8.523V18c0 1.105-.895 2-2 2H4c-1.105 0-2-.895-2-2V8.523l9.02 5.073c.302.17.64.255.98.255.34 0 .678-.085.98-.255L22 8.523zM20 4c1.104 0 2 .895 2 2v.227l-10 5.625L2 6.227V6c0-1.104.896-2 2-2z"
+                    />
+                  </g>
+                </svg>
+                kr@biz.wirebarley.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="tx" class="panel">
         <h3>송금</h3>
         <p>송금페이지</p>
-      </div>
-      <div id="home" class="panel active">
-        <h3>Dashboard</h3>
-        <p>Welcome to the home panel of your dashboard.</p>
       </div>
       <div id="Transaction" class="panel">
         <h3>Transaction</h3>
