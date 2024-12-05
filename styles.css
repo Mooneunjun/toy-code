@@ -103,14 +103,98 @@ body {
   padding: 48px 15px;
   margin: 0 auto;
 
-  h3 {
-    font-size: 28px;
-    margin: 0 0 8px;
-  }
+
 }
 
-.panel {
-  display: none;
+.main-content-container {
+
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 8px;
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .language {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+    
+    .language-btn {
+      width: 78px;
+      padding: 8px 20px 8px 10px;
+      font-size: 14px;
+      border: 1px solid #e7eaee;
+      border-radius: 4px;
+      background-color: #f8f9fa;
+      color: #333;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+    
+    .language-btn::after {
+      content: '';
+      border: solid #333;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 2px;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      pointer-events: none; /* 아이콘 클릭 불가 */
+    }
+
+    .language-btn:hover {
+      background-color: #e7eaee;
+    }
+    
+    .language-popup {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      z-index: 1000;
+      width: 100px;
+      border: 1px solid #e7eaee;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .language-popup ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .language-popup li {
+      padding: 10px;
+      cursor: pointer;
+
+      &.active{
+        /* 와이어바알리 컬러 초록 */
+        background-color: #15a46a;   
+        color: #fff;
+
+        &:hover {
+          background-color: #128456;
+        }
+      }
+    }
+    
+    .language-popup li:hover {
+      background-color: #f0f0f0;
+    }
+  }
 }
 
 .panel.active {

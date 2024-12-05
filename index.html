@@ -231,6 +231,9 @@
             로그아웃
           </a>
         </li>
+
+   
+
       </ul>
 
       <footer class="nav-footer">
@@ -243,8 +246,25 @@
       </footer>
     </div>
     <div class="main-content">
-      <div id="home" class="panel active">
+      
+      <div id="home" class="main-content-container">
+        <div class="header">
         <h3 class="dashboard-title">Dashboard</h3>
+        <!-- 언어설정 -->
+        <div class="language">
+          <button class="language-btn" onclick="toggleLanguagePopup()">한국어</button>
+          <div class="language-popup" id="languagePopup">
+            <ul>
+              <li onclick="setLanguage('ko')" class="active">한국어</li>
+              <li onclick="setLanguage('en')">English</li>
+              <li onclick="setLanguage('zh')">中文</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="home" class="panel active">
         <div class="content-wrapper">
           <div class="business-info">
             <h3 class="business-title">
@@ -309,6 +329,7 @@
         </div>
       </div>
 
+
       <div id="tx" class="panel">
         <h3>송금</h3>
         <p>송금페이지</p>
@@ -334,6 +355,7 @@
         <h3>로그아웃</h3>
         <p>로그아웃 페이지</p>
       </div>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>

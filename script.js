@@ -18,3 +18,44 @@ function showPanel(panelId) {
     .querySelector(`a[onclick="showPanel('${panelId}')"]`)
     .classList.add("active");
 }
+
+
+function toggleLanguagePopup() {
+  const popup = document.getElementById('languagePopup');
+  popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+}
+
+function setLanguage(language) {
+  const languageBtn = document.querySelector('.language-btn');
+  const languageItems = document.querySelectorAll('.language-popup li');
+  
+  languageItems.forEach(item => {
+    item.classList.remove('active');
+  });
+
+  switch (language) {
+    case 'ko':
+      languageBtn.textContent = '한국어';
+      document.querySelector('.language-popup li[onclick="setLanguage(\'ko\')"]').classList.add('active');
+      break;
+    case 'en':
+      languageBtn.textContent = 'English';
+      document.querySelector('.language-popup li[onclick="setLanguage(\'en\')"]').classList.add('active');
+      break;
+    case 'zh':
+      languageBtn.textContent = '中文';
+      document.querySelector('.language-popup li[onclick="setLanguage(\'zh\')"]').classList.add('active');
+      break;
+  }
+  toggleLanguagePopup();
+}
+
+// 팝업 외부를 클릭하면 팝업을 닫는 이벤트 리스너 추가
+window.addEventListener('click', function(event) {
+  const popup = document.getElementById('languagePopup');
+  if (!event.target.matches('.language-btn')) {
+    if (popup.style.display === 'block') {
+      popup.style.display = 'none';
+    }
+  }
+});
