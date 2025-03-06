@@ -45,4 +45,4 @@ function fallWord(element) {
 }
 
 // 일정 간격마다 새로운 단어 생성 (1.2초마다 새로운 단어 추가)
-setInterval(createWord, 1200);
+setInterval(createWord, 1400);
