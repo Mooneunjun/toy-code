@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acid Rain</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="matrix"></canvas>
+    <script>
+      const canvas = document.getElementById("matrix");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const words = [
+        "Java",
+        "Hack",
+        "Code",
+        "Cyber",
+        "AI",
+        "Data",
+        "Virus",
+        "Script",
+      ];
+      const fontSize = 40; //  폰트 크기
+      const columns = Math.floor(canvas.width / (fontSize * 3)); // 降低密度 // 열 수
+      const drops = Array.from({ length: columns }, () => ({
+        text: words[Math.floor(Math.random() * words.length)],
+        x: Math.floor(Math.random() * columns) * fontSize * 3,
+        y: Math.random() * canvas.height * 2 - canvas.height,
+        speed: 0.03 + Math.random() * 0.07, // 속도
+      }));
+
+      function draw() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.25)"; // 배경색
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < drops.length; i++) {
+          let drop = drops[i];
+          ctx.fillStyle = "#0F0"; // 글자색
+          ctx.font = `${fontSize}px monospace`;
+          ctx.fillText(drop.text, drop.x, drop.y);
+          drop.y += drop.speed * fontSize;
+          if (drop.y > canvas.height) {
+            drop.y = -fontSize;
+            drop.text = words[Math.floor(Math.random() * words.length)];
+          }
+        }
+        requestAnimationFrame(draw); // 使用 requestAnimationFrame 让动画更流畅
+      }
+
+      draw(); // 启动动画
+
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+  </body>
+</html>
