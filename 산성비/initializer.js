@@ -20,29 +20,29 @@ function createWord() {
 
   const span = document.createElement("span");
   span.classList.add("word");
-  span.style.top = `0px`; // 처음 위치를 위쪽으로 설정
+  span.style.top = `0px`;
   span.style.left = `${getRandomInt(20, maxPositionX)}px`;
   span.dataset.word = word;
   span.textContent = word;
   container.append(span);
 
-  fallWord(span); // 떨어지는 애니메이션 실행
+  fallWord(span);
 }
 
 function fallWord(element) {
   let positionY = 0;
-  const speed = getRandomInt(1, 3); // 더 천천히 떨어지도록 속도 범위 설정 (1~3)
+  const speed = getRandomInt(1, 3);
 
   const interval = setInterval(() => {
     positionY += speed;
     element.style.top = `${positionY}px`;
+    element.dataset.positionY = positionY;
 
     if (positionY >= container.offsetHeight - 50) {
       clearInterval(interval);
-      element.remove(); // 화면 아래로 벗어나면 제거
+      element.remove();
     }
-  }, 50); // 50ms 간격으로 실행 (더 부드럽고 천천히 떨어짐)
+  }, 50);
 }
 
-// 일정 간격마다 새로운 단어 생성 (1.2초마다 새로운 단어 추가)
 setInterval(createWord, 1400);

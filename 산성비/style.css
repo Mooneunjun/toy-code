@@ -3,41 +3,41 @@
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	background-image: url('imgs/background.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #container {
-	position: relative;
-	width: 90%;
-	height: 80%;
-	box-shadow: 0 0 15px 1px #3b3b41;
-	background-color: rgba(10, 10, 10, 0.3);
-	border-radius: 15px;
+  position: relative;
+  width: 90%;
+  height: 80%;
+  box-shadow: 0 0 15px 1px #3b3b41;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 15px;
 }
 
 #input {
-	width: 180px;
-	height: 45px;
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	padding: 10px;
-	transform: translateX(-50%);
-	font-size: 16px;
-	border: none;
+  margin-top: 20px;
+  width: 180px;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #3b3b41;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 1px #b1b1b1;
 }
 
 .word {
-	position: absolute;
-	color: #ffffff;
-	font-size: 20px;
-	font-weight: 500;
+  position: absolute;
+  color: #0f0;
+  font: "40px monospace";
+  font-size: 20px;
+  font-weight: 500;
 }
