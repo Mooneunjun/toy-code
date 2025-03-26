@@ -78,3 +78,5 @@ function removeWord() {
 
 input.addEventListener("input", updateHighlight);
 input.addEventListener("change", removeWord);
+
+

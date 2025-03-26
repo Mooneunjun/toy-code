@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>高级本地聊天示例</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 登录/加入房间界面 -->
+  <div id="setup" class="setup">
+    <h2>进入聊天室</h2>
+    <input id="roomInput" placeholder="房间名" />
+    <!-- 使用字母头像，故取消原头像选择区 -->
+    <input id="nameInput" placeholder="你的昵称 (输入 admin 可成为管理员)" />
+    <button id="joinBtn">进入</button>
+  </div>
+
+  <!-- 聊天窗口 -->
+  <div id="chat" class="chat hidden">
+    <div class="chat-header">
+      <!-- 左上角房间信息 -->
+      <div class="room-info">
+        <span id="roomName"></span>
+        <!-- 仅 admin 可见：查看在线用户按钮 -->
+        <button id="userListBtn" class="user-list-btn hidden">👥</button>
+      </div>
+      <!-- 中间：对方正在输入 -->
+      <span id="typingIndicator" class="typing-indicator"></span>
+      <!-- 右侧：清空记录 & 退出按钮 （清空仅 admin 可见）-->
+      <div>
+        <button id="clearBtn" class="clear-btn hidden">清空记录</button>
+        <button id="exitBtn" class="exit-btn">退出</button>
+      </div>
+    </div>
+
+    <!-- 消息列表 -->
+    <div id="messageList" class="message-list"></div>
+
+    <!-- 输入区 -->
+    <div class="chat-input">
+      <textarea id="messageInput" placeholder="输入消息 (Shift+Enter换行)"></textarea>
+      <button id="sendBtn" disabled>发送</button>
+    </div>
+  </div>
+
+  <!-- 在线用户列表面板，仅 admin 可见 -->
+  <div id="userListPanel" class="user-list-panel hidden">
+    <h3>在线用户 <span id="onlineCount"></span></h3>
+    <ul id="userList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
