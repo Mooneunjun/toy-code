@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tic Tac Toe</h1>
+    </header>
+    <main>
+      <div class="scoreboard">
+        <div id="player1">
+          <div class="score-container">
+            <span id="player1-score">0</span>
+            <div class="player-name">
+              Player
+              <img class="player-icon" src="assets/o.svg" alt="Player 1" />
+            </div>
+          </div>
+        </div>
+        <div class="versus">:</div>
+        <div id="player2">
+          <div class="score-container">
+            <span id="player2-score">0</span>
+            <div class="player-name">
+              Player
+              <img class="player-icon" src="assets/x.svg" alt="Player 2" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="turn">
+        <span class="turn-icon player1"></span>
+        <span id="turn-message">Turn</span>
+      </div>
+      <div class="gameboard">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

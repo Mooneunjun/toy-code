@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  background: #d2bea7;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin: 9px 0;
+  color: #6a4d4d;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1.02px;
+}
+
+main {
+  margin: 0 auto;
+  overflow: hidden;
+  width: fit-content;
+  border-radius: 20px;
+  background: #efe1d1;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard {
+  gap: 8px;
+  display: flex;
+  font-size: 32px;
+  padding: 50px 87px;
+  background: #e1d1be;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-container {
+  color: #806464;
+  line-height: 1;
+  font-size: 28px;
+  min-width: 70px;
+  font-weight: 500;
+  padding: 21px 25px;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  background: #efe1d1;
+  box-shadow: 1px 1px 3px 0px #987c7c inset;
+}
+
+.versus {
+  color: #987c7c;
+}
+
+.player-name {
+  left: -50%;
+  color: #987c7c;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: calc(100% + 8px);
+  letter-spacing: -0.14px;
+  transform: translateX(50%);
+}
+
+.player-icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.turn {
+  gap: 10px;
+  display: flex;
+  color: #987c7c;
+  font-size: 24px;
+  min-width: 160px;
+  font-weight: 700;
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 10px;
+  align-items: center;
+  margin: 25px auto 0;
+  justify-content: center;
+  letter-spacing: -0.24px;
+  border: 2px solid #e1d0be;
+}
+
+.turn-icon {
+  width: 25px;
+  height: 25px;
+  display: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.turn-icon.player1,
+.turn-icon.player2 {
+  display: inline-block;
+}
+
+.turn-icon.player1 {
+  background-image: url("assets/o.svg");
+}
+
+.turn-icon.player2 {
+  background-image: url("assets/x.svg");
+}
+
+.gameboard {
+  gap: 5px;
+  display: grid;
+  padding: 20px;
+  width: fit-content;
+  grid-template:
+    repeat(3, 110px) /
+    repeat(3, 110px);
+}
+
+.cell {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fef2e6;
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cell.player1 {
+  background-image: url("assets/o.svg");
+}
+
+.cell.player2 {
+  background-image: url("assets/x.svg");
+}
